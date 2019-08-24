@@ -9,7 +9,8 @@ class ProductTest < MiniTest::Test
       'id' => 1,
       'title' => 'Water Lilies',
       'description' => 'Print on gloss paper with card mount, 20cm x 35cm',
-      'artist_id' => 2
+      'artist_id' => 2,
+      'buying_cost' => 5.59
       })
   end
 
@@ -28,6 +29,10 @@ class ProductTest < MiniTest::Test
 
   def test_product_has_artist_id
     assert_equal(2, @product1.artist_id())
+  end
+
+  def test_product_had_buying_cost
+    assert_equal(5.59, @product1.buying_cost)
   end
 
 end
