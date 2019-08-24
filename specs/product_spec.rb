@@ -8,7 +8,8 @@ class ProductTest < MiniTest::Test
     @product1 = Product.new({
       'id' => 1,
       'title' => 'Water Lilies',
-      'description' => 'Print on gloss paper with card mount, 20cm x 35cm'
+      'description' => 'Print on gloss paper with card mount, 20cm x 35cm',
+      'artist_id' => 2
       })
   end
 
@@ -23,6 +24,10 @@ class ProductTest < MiniTest::Test
   def test_product_has_description
     description = 'Print on gloss paper with card mount, 20cm x 35cm'
     assert_equal(description, @product1.description())
+  end
+
+  def test_product_has_artist_id
+    assert_equal(2, @product1.artist_id())
   end
 
 end
