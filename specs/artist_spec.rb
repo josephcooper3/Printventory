@@ -20,13 +20,13 @@ class ArtistTest < MiniTest::Test
     assert_equal('Claude', @artist1.first_name())
   end
 
-  def test_artist_has_last_name
-    assert_equal('Monet', @artist1.last_name())
-  end
-
   def test_can_change_first_name
     @artist1.first_name = 'Vincent'
     assert_equal('Vincent', @artist1.first_name())
+  end
+
+  def test_artist_has_last_name
+    assert_equal('Monet', @artist1.last_name())
   end
 
   def test_can_change_last_name
