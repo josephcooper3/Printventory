@@ -8,7 +8,13 @@ artist1 = Artist.new({
   'last_name' => 'Monet'
 })
 
+artist2 = Artist.new({
+  'first_name' => 'Pablo',
+  'last_name' => 'Picasso'
+})
+
 artist1.save()
+artist2.save()
 
 binding.pry
 nil
