@@ -13,4 +13,22 @@ class Product
     @copies_in_stock = options['copies_in_stock'].to_i
   end
 
+  def save()
+    sql = "INSERT INTO products (
+    title,
+    description,
+    artist_id,
+    buying_cost,
+    sale_price,
+    copies_in_stock
+    )
+    VALUES
+    ($1, $2, $3, $4, $5, $6)
+    RETURNING id"
+    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock]
+    result = SqlRunner.run(sql, values)
+    @id = result[0]['id'].to_i
+  end
+
+
 end
