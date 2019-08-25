@@ -70,4 +70,14 @@ class ProductTest < MiniTest::Test
     assert_equal(5, @product1.copies_in_stock())
   end
 
+  def test_can_increase_copies_in_stock
+    @product1.copies_in_stock += 1
+    assert_equal(6, @product1.copies_in_stock())
+  end
+
+  def test_can_decrease_copies_in_stock
+    @product1.copies_in_stock -= 1
+    assert_equal(4, @product1.copies_in_stock())
+  end
+
 end
