@@ -40,4 +40,20 @@ class Product
     map_results(result)
   end
 
+  def update()
+    sql = "UPDATE products SET (
+    title,
+    description,
+    artist_id,
+    buying_cost,
+    sale_price,
+    copies_in_stock
+    )
+    = ($1, $2, $3, $4, $5, $6)
+    WHERE id = $7
+    "
+    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
