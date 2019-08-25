@@ -33,4 +33,9 @@ class Artist
     map_results(result)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
+
 end
