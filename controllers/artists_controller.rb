@@ -16,3 +16,9 @@ get '/artists/:id' do
   @artist = Artist.find_by_id(params[:id])
   erb(:"artists/show")
 end
+
+post '/artists' do
+  artist = Artist.new(params)
+  artist.save()
+  redirect to('/artists')
+end
