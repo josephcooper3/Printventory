@@ -1,4 +1,5 @@
 require('sinatra')
+require('sinatra/reloader')
 require('sinatra/contrib/all')
 require_relative('../models/product.rb')
 also_reload('../models/*')

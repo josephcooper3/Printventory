@@ -1,10 +1,15 @@
 require('sinatra')
+require('sinatra/reloader')
 require('sinatra/contrib/all')
 require_relative('../models/artist.rb')
 also_reload('../models/*')
 
 get '/artists' do
   erb(:"artists/index")
+end
+
+get '/artists/new' do
+  erb(:"artists/new")
 end
 
 get '/artists/:id' do
