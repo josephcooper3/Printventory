@@ -8,6 +8,10 @@ get '/products' do
   erb(:"products/index")
 end
 
+get '/products/new' do
+  erb(:"products/new")
+end
+
 get '/products/:id' do
   @product = Product.find_by_id(params[:id])
   erb(:"products/show")
