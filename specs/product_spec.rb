@@ -10,8 +10,8 @@ class ProductTest < MiniTest::Test
       'title' => 'Water Lilies',
       'description' => 'Print on gloss paper with card mount, 20cm x 35cm',
       'artist_id' => 2,
-      'buying_cost' => 5.59,
-      'sale_price' => 12.99,
+      'buying_cost' => 559,
+      'sale_price' => 1299,
       'copies_in_stock' => 5
       })
   end
@@ -49,21 +49,21 @@ class ProductTest < MiniTest::Test
   end
 
   def test_product_has_buying_cost
-    assert_equal(5.59, @product1.buying_cost())
+    assert_equal(559, @product1.buying_cost())
   end
 
   def test_can_change_buying_cost
-    @product1.buying_cost = 6.23
-    assert_equal(6.23, @product1.buying_cost())
+    @product1.buying_cost = 623
+    assert_equal(623, @product1.buying_cost())
   end
 
   def test_product_has_sale_price
-    assert_equal(12.99, @product1.sale_price())
+    assert_equal(1299, @product1.sale_price())
   end
 
   def test_can_change_sale_price
-    @product1.sale_price = 14.50
-    assert_equal(14.50, @product1.sale_price())
+    @product1.sale_price = 1450
+    assert_equal(1450, @product1.sale_price())
   end
 
   def test_product_has_copies_in_stock

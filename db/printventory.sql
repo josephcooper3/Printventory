@@ -12,7 +12,7 @@ CREATE TABLE products (
   title VARCHAR(255),
   description TEXT,
   artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE,
-  buying_cost FLOAT(2),
-  sale_price FLOAT(2),
+  buying_cost INT,
+  sale_price INT,
   copies_in_stock INT4
 )

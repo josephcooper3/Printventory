@@ -8,8 +8,8 @@ class Product
     @title = options['title']
     @description = options['description']
     @artist_id = options['artist_id'].to_i
-    @buying_cost = options['buying_cost'].to_f
-    @sale_price = options['sale_price'].to_f
+    @buying_cost = options['buying_cost'].to_i
+    @sale_price = options['sale_price'].to_i
     @copies_in_stock = options['copies_in_stock'].to_i
   end
 

@@ -21,8 +21,8 @@ product1 = Product.new({
   'title' => 'Water Lilies',
   'description' => 'Print on gloss paper with card mount, 20cm x 35cm',
   'artist_id' => artist1.id(),
-  'buying_cost' => 5.59,
-  'sale_price' => 12.99,
+  'buying_cost' => 559,
+  'sale_price' => 1299,
   'copies_in_stock' => 5
 })
 
@@ -30,8 +30,8 @@ product2 = Product.new({
   'title' => 'Guernica',
   'description' => 'Print on canvas with pine stretcher, 50cm x 20cm',
   'artist_id' => artist2.id(),
-  'buying_cost' => 15.35,
-  'sale_price' => 29.99,
+  'buying_cost' => 1535,
+  'sale_price' => 2999,
   'copies_in_stock' => 2
 })
 
