@@ -26,6 +26,16 @@
   </tr>
 </table>
 
-<form action="/products/<%= @product.id() %>/delete" method="post">
-  <input type="submit" value="Delete Product">
-</form>
+<br>
+
+<div class="buttons">
+
+  <form action="/products/<%= @product.id() %>/edit" method="get">
+    <input type="submit" value="Edit Product Details">
+  </form>
+  <br>
+  <form action="/products/<%= @product.id() %>/delete" method="post">
+    <input type="submit" value="Delete Product">
+  </form>
+
+</div>
