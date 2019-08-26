@@ -33,3 +33,9 @@ post '/products/:id' do
   product.update()
   redirect to('/products')
 end
+
+post '/products/:id/delete' do
+  product = Product.find_by_id(params[:id])
+  product.delete()
+  redirect to('/products')
+end
