@@ -22,3 +22,14 @@ post '/products' do
   product.save()
   redirect to('/products')
 end
+
+get '/products/:id/edit' do
+  @product = Product.find_by_id(params[:id])
+  erb(:"products/edit")
+end
+
+post '/products/:id' do
+  product = Product.new(params)
+  product.update()
+  redirect to('/products')
+end

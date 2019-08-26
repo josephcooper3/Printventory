@@ -1,0 +1,31 @@
+<h3>Edit Product Details</h3>
+
+<form action="/products/<%= @product.id() %>" method="post">
+
+  <label for="title-field">Title:</label>
+  <input type="text" name="title" id="title-field"
+  value="<%= @product.title() %>">
+
+  <label for="description-field">Description:</label>
+  <input type="text" name="description" id="description-field"
+  value="<%= @product.description() %>">
+
+  <label for="artist_id-field">Artist:</label>
+  <input type="number" name="artist_id" id="artist_id-field"
+  value="<%= @product.artist_id() %>">
+
+  <label for="buying_cost-field">Buying Cost:</label>
+  <input type="number" name="buying_cost" id="buying_cost-field"
+  value="<%= @product.buying_cost() %>">
+
+  <label for="sale_price-field">Sale Price:</label>
+  <input type="number" name="sale_price" id="sale_price-field"
+  value="<%= @product.sale_price() %>">
+
+  <label for="copies_in_stock-field">Copies in Stock:</label>
+  <input type="number" name="copies_in_stock" id="copies_in_stock-field"
+  value="<%= @product.copies_in_stock() %>">
+  <br>
+  <input type="submit" value="Submit">
+
+</form>
