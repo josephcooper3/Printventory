@@ -1,1 +1,27 @@
-<p>Full details page for <%= @product.title() %></p>
+<h3>Full Details View</h3>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2"><%= @product.title() %> (SKU <%= @product.id() %>)</th>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= @product.description() %></td>
+  </tr>
+  <tr>
+    <th>Artist</th>
+    <td><%= @product.artist_id() %></td>
+  </tr>
+  <tr>
+    <th>Buying Cost</th>
+    <td><%= @product.buying_cost() %></td>
+  </tr>
+  <tr>
+    <th>Sale Price</th>
+    <td><%= @product.sale_price() %></td>
+  </tr>
+  <tr>
+    <th>Quantity in Stock</th>
+    <td><%= @product.copies_in_stock() %></td>
+  </tr>
+</table>
