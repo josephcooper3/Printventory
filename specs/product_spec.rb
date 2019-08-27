@@ -100,4 +100,14 @@ class ProductTest < MiniTest::Test
     assert_equal(result, "12.99")
   end
 
+  def test_convert_to_pence__buying_cost
+    @product1.buying_cost = Product.convert_to_pence("9.99")
+    assert_equal(999, @product1.buying_cost)
+  end
+
+  def test_convert_to_pence__sale_price
+    @product1.sale_price = Product.convert_to_pence("14.99")
+    assert_equal(1499, @product1.sale_price())
+  end
+
 end

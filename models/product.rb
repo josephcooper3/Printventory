@@ -1,4 +1,5 @@
 require_relative('../db/sqlrunner')
+require('pry')
 
 class Product
 
@@ -89,6 +90,14 @@ class Product
     pounds = amount / 100
     pence = amount % 100
     return "#{pounds}.#{pence}"
+  end
+
+  def self.convert_to_pence(amount)
+    amount = amount.to_s
+    amount = amount.split('.')
+    pounds =  amount[0].to_i * 100
+    pence = amount[1].to_i
+    return pounds + pence
   end
 
 end
