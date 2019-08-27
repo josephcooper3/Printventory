@@ -20,7 +20,7 @@ end
 post '/artists' do
   artist = Artist.new(params)
   artist.save()
-  redirect to('/artists')
+  redirect to("/artists/#{artist.id()}")
 end
 
 get '/artists/:id/edit' do
@@ -31,11 +31,11 @@ end
 post '/artists/:id' do
   artist = Artist.new(params)
   artist.update()
-  redirect to('/artists')
+  redirect to("/artists/#{artist.id()}")
 end
 
 post '/artists/:id/delete' do
   artist = Artist.find_by_id(params[:id])
   artist.delete()
-  redirect to('/products')
+  redirect to('/artists')
 end

@@ -23,7 +23,7 @@ post '/products' do
   params[:sale_price] = Product.convert_to_pence(params[:sale_price])
   product = Product.new(params)
   product.save()
-  redirect to('/products')
+  redirect to("/products/#{product.id()}")
 end
 
 get '/products/:id/edit' do
@@ -36,11 +36,11 @@ post '/products/:id' do
   params[:sale_price] = Product.convert_to_pence(params[:sale_price])
   product = Product.new(params)
   product.update()
-  redirect to('/products')
+  redirect to("/products/#{product.id()}")
 end
 
 post '/products/:id/delete' do
   product = Product.find_by_id(params[:id])
   product.delete()
-  redirect to('/products')
+  redirect to("/products")
 end
