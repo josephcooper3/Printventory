@@ -10,7 +10,7 @@
   </tr>
   <tr>
     <th>Artist</th>
-    <td><%= @product.artist_id() %></td>
+    <td><%= Artist.find_by_id(@product.artist_id()).full_name() %></td>
   </tr>
   <tr>
     <th>Buying Cost</th>
