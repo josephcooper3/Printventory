@@ -7,6 +7,7 @@ also_reload('../models/*')
 
 get '/products' do
   @products = Product.all()
+  @artists = Artist.all()
   erb(:"products/index")
 end
 
@@ -32,6 +33,16 @@ get '/products/:id/edit' do
   @product = Product.find_by_id(params[:id])
   @artists = Artist.all()
   erb(:"products/edit")
+end
+
+post '/products/filter' do
+  redirect to("/products/filter/#{params[:artist_id]}")
+end
+
+get '/products/filter/:id' do
+  @artist = Artist.find_by_id(params[:id])
+  @artists = Artist.all()
+  erb(:"products/filter")
 end
 
 post '/products/:id' do

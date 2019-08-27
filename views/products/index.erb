@@ -1,4 +1,15 @@
 <h3>Inventory View</h3>
+
+<form action="/products/filter" method="post">
+  <label for="artist_id-select">Filter by Artist:</label>
+  <select name="artist_id" id="artist_id-select">
+    <% @artists.each do |artist| %>
+        <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Filter">
+</form>
+<br>
 <table style="width:100%">
   <tr>
     <th>SKU</th>
