@@ -90,4 +90,14 @@ class ProductTest < MiniTest::Test
     assert_equal("out-of-stock", @product1.stock_status())
   end
 
+  def test_convert_to_pounds__buying_cost
+    result = Product.convert_to_pounds(@product1.buying_cost())
+    assert_equal(result, "5.59")
+  end
+
+  def test_convert_to_pounds__sale_price
+    result = Product.convert_to_pounds(@product1.sale_price())
+    assert_equal(result, "12.99")
+  end
+
 end
