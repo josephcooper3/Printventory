@@ -30,6 +30,7 @@ end
 
 get '/products/:id/edit' do
   @product = Product.find_by_id(params[:id])
+  @artists = Artist.all()
   erb(:"products/edit")
 end
 

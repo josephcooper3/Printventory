@@ -10,9 +10,16 @@
   <input type="text" name="description" id="description-field"
   value="<%= @product.description() %>">
 
-  <label for="artist_id-field">Artist:</label>
-  <input type="number" name="artist_id" id="artist_id-field"
-  value="<%= @product.artist_id() %>">
+  <label for="artist_id-select">Artist:</label>
+  <select name="artist_id" id="artist_id-select">
+    <% @artists.each do |artist| %>
+      <% if artist.id() == @product.artist_id() %>
+        <option value="<%= artist.id() %>" selected><%= artist.full_name() %></option>
+      <% else %>
+        <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
+      <% end %>
+    <% end %>
+  </select>
 
   <label for="buying_cost-field">Buying Cost: £</label>
   <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field"
