@@ -19,6 +19,8 @@ get '/products/:id' do
 end
 
 post '/products' do
+  params[:buying_cost] = Product.convert_to_pence(params[:buying_cost])
+  params[:sale_price] = Product.convert_to_pence(params[:sale_price])
   product = Product.new(params)
   product.save()
   redirect to('/products')
@@ -30,6 +32,8 @@ get '/products/:id/edit' do
 end
 
 post '/products/:id' do
+  params[:buying_cost] = Product.convert_to_pence(params[:buying_cost])
+  params[:sale_price] = Product.convert_to_pence(params[:sale_price])
   product = Product.new(params)
   product.update()
   redirect to('/products')
