@@ -1,0 +1,15 @@
+<h3>Enter Artist Details</h3>
+
+<form action="/artists/<%= @artist.id() %>" method="post">
+
+  <label for="first_name-field">First Name:</label>
+  <input type="text" name="first_name" id="first_name-field"
+  value="<%= @artist.first_name() %>">
+
+  <label for="last_name-field">Last Name:</label>
+  <input type="text" name="last_name" id="last_name-field"
+  value="<%= @artist.last_name() %>">
+  <br>
+  <input type="submit" value="Submit">
+
+</form>

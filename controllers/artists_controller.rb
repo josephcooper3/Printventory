@@ -22,3 +22,13 @@ post '/artists' do
   artist.save()
   redirect to('/artists')
 end
+
+# edit
+get '/artists/:id/edit' do
+  @artist = Artist.find_by_id(params[:id])
+  erb(:"artists/edit")
+end
+
+# save
+
+# destroy
