@@ -87,8 +87,9 @@ class Product
   end
 
   def self.convert_to_pounds(amount)
-    pounds = amount / 100
-    pence = amount % 100
+    pounds = (amount / 100).to_s
+    pence = (amount % 100).to_s
+    pence = "00" if pence == "0"
     return "#{pounds}.#{pence}"
   end
 
