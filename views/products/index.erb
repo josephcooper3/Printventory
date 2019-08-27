@@ -13,7 +13,7 @@
     <td><%= product.id() %></td>
     <td><%= product.title() %></td>
     <td><%= product.artist_id() %></td>
-    <td><%= product.sale_price() %></td>
+    <td>£<%= Product.convert_to_pounds(product.sale_price()) %></td>
     <td class="<%= product.stock_status() %>">
       <%= product.copies_in_stock() %>
     </td>

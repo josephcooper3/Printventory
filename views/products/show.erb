@@ -14,11 +14,11 @@
   </tr>
   <tr>
     <th>Buying Cost</th>
-    <td><%= @product.buying_cost() %></td>
+    <td>£<%= Product.convert_to_pounds(@product.buying_cost()) %></td>
   </tr>
   <tr>
     <th>Sale Price</th>
-    <td><%= @product.sale_price() %></td>
+    <td>£<%= Product.convert_to_pounds(@product.sale_price()) %></td>
   </tr>
   <tr>
     <th>Quantity in Stock</th>
