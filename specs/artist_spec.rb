@@ -34,4 +34,22 @@ class ArtistTest < MiniTest::Test
     assert_equal('Lorrain', @artist1.last_name())
   end
 
+  def test_full_name
+    assert_equal('Claude Monet', @artist1.full_name())
+  end
+
+  def test_full_name__first_name_only
+    artist = Artist.new({
+      'first_name' => 'Rembrandt',
+    })
+    assert_equal('Rembrandt', artist.full_name())
+  end
+
+  def test_full_name__last_name_only
+    artist = Artist.new({
+      'last_name' => 'Canaletto',
+    })
+    assert_equal('Canaletto', artist.full_name())
+  end
+
 end

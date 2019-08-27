@@ -61,4 +61,10 @@ class Artist
     return Artist.new(result)
   end
 
+  def full_name()
+    return @first_name if @last_name == nil
+    return @last_name if @first_name == nil
+    return "#{@first_name} #{@last_name}"
+  end
+
 end
