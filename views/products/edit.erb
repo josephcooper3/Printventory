@@ -14,13 +14,13 @@
   <input type="number" name="artist_id" id="artist_id-field"
   value="<%= @product.artist_id() %>">
 
-  <label for="buying_cost-field">Buying Cost:</label>
-  <input type="number" name="buying_cost" id="buying_cost-field"
-  value="<%= @product.buying_cost() %>">
+  <label for="buying_cost-field">Buying Cost: £</label>
+  <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field"
+  value="<%= Product.convert_to_pounds(@product.buying_cost()) %>">
 
-  <label for="sale_price-field">Sale Price:</label>
-  <input type="number" name="sale_price" id="sale_price-field"
-  value="<%= @product.sale_price() %>">
+  <label for="sale_price-field">Sale Price: £</label>
+  <input type="number" min="0.01" step="0.01" name="sale_price" id="sale_price-field"
+  value="<%= Product.convert_to_pounds(@product.sale_price()) %>">
 
   <label for="copies_in_stock-field">Copies in Stock:</label>
   <input type="number" name="copies_in_stock" id="copies_in_stock-field"
