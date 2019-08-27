@@ -14,15 +14,7 @@
     <td><%= product.title() %></td>
     <td><%= product.artist_id() %></td>
     <td><%= product.sale_price() %></td>
-    
-    <!-- Possibly refactor this so the stock logic is in the model -->
-    <td class="
-      <% if product.copies_in_stock() == 0 %>
-        <%= 'out-of-stock' %>
-      <% elsif product.copies_in_stock() < 3 %>
-        <%= 'low-stock' %>
-      <% end %>
-      ">
+    <td class="<%= product.stock_status() %>">
       <%= product.copies_in_stock() %>
     </td>
     <td><a href="/products/<%= product.id() %>">Full Details</a></td>

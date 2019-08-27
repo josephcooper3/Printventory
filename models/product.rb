@@ -77,4 +77,12 @@ class Product
     return Product.new(result)
   end
 
+  def stock_status()
+    if @copies_in_stock == 0
+      return "out-of-stock"
+    elsif @copies_in_stock < 3
+      return "low-stock"
+    end
+  end
+
 end
