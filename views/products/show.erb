@@ -10,7 +10,8 @@
   </tr>
   <tr>
     <th>Artist</th>
-    <td><%= Artist.find_by_id(@product.artist_id()).full_name() %></td>
+    <td><a href="/artists/<%= @product.artist_id() %>">
+      <%= Artist.find_by_id(@product.artist_id()).full_name() %></a></td>
   </tr>
   <tr>
     <th>Buying Cost</th>

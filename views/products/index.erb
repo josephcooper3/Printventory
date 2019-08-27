@@ -12,7 +12,8 @@
   <tr>
     <td><%= product.id() %></td>
     <td><%= product.title() %></td>
-    <td><%= Artist.find_by_id(product.artist_id()).full_name() %></td>
+    <td><a href="/artists/<%= product.artist_id() %>">
+      <%= Artist.find_by_id(product.artist_id()).full_name() %></a></td>
     <td>£<%= Product.convert_to_pounds(product.sale_price()) %></td>
     <td class="<%= product.stock_status() %>">
       <%= product.copies_in_stock() %>
