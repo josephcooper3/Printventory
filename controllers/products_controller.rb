@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/reloader')
 require('sinatra/contrib/all')
 require_relative('../models/product.rb')
+require_relative('../models/artist.rb')
 also_reload('../models/*')
 
 get '/products' do
@@ -10,6 +11,7 @@ get '/products' do
 end
 
 get '/products/new' do
+  @artists = Artist.all()
   erb(:"products/new")
 end
 

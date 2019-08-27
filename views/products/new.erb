@@ -8,8 +8,12 @@
   <label for="description-field">Description:</label>
   <input type="text" name="description" id="description-field">
 
-  <label for="artist_id-field">Artist:</label>
-  <input type="number" name="artist_id" id="artist_id-field">
+  <label for="artist_id-select">Artist:</label>
+  <select name="artist_id" id="artist_id-select">
+    <% @artists.each do |artist| %>
+      <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
+    <% end %>
+  </select>
 
   <label for="buying_cost-field">Buying Cost:</label>
   <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field">
