@@ -80,4 +80,14 @@ class ProductTest < MiniTest::Test
     assert_equal(4, @product1.copies_in_stock())
   end
 
+  def test_stock_status_low_stock
+    @product1.copies_in_stock = 1
+    assert_equal("low-stock", @product1.stock_status())
+  end
+
+  def test_stock_status_out_of_stock
+    @product1.copies_in_stock = 0
+    assert_equal("out-of-stock", @product1.stock_status())
+  end
+
 end
