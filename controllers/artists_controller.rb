@@ -34,4 +34,8 @@ post '/artists/:id' do
   redirect to('/artists')
 end
 
-# destroy
+post '/artists/:id/delete' do
+  artist = Artist.find_by_id(params[:id])
+  artist.delete()
+  redirect to('/products')
+end
