@@ -5,43 +5,46 @@ require_relative('../models/product')
 Artist.delete_all()
 
 artist1 = Artist.new({
-  'first_name' => 'Claude',
-  'last_name' => 'Monet'
+  'first_name' => 'John',
+  'last_name' => 'Constable'
 })
 
 artist2 = Artist.new({
-  'first_name' => 'Pablo',
-  'last_name' => 'Picasso'
+  'first_name' => 'JMW',
+  'last_name' => 'Turner'
 })
 
 artist1.save()
 artist2.save()
 
 product1 = Product.new({
-  'title' => 'Water Lilies',
+  'title' => 'Cloud Study',
   'description' => 'Print on gloss paper with card mount, 20cm x 35cm',
   'artist_id' => artist1.id(),
   'buying_cost' => 559,
   'sale_price' => 1299,
-  'copies_in_stock' => 5
+  'copies_in_stock' => 5,
+  'image_ref' => 'cloudstudy.jpg'
 })
 
 product2 = Product.new({
-  'title' => 'Guernica',
-  'description' => 'Print on canvas with pine stretcher, 50cm x 20cm',
-  'artist_id' => artist2.id(),
+  'title' => 'Hadleigh Castle',
+  'description' => 'Print on canvas with pine stretcher, 50cm x 40cm',
+  'artist_id' => artist1.id(),
   'buying_cost' => 1535,
   'sale_price' => 2999,
-  'copies_in_stock' => 2
+  'copies_in_stock' => 2,
+  'image_ref' => 'hadleighcastle.jpg'
 })
 
 product3 = Product.new({
-  'title' => 'The Blue Room',
+  'title' => 'Tummel Bridge, Perthshire',
   'description' => 'Print on matte paper with card mount, 20cm x 35cm',
   'artist_id' => artist2.id(),
   'buying_cost' => 615,
   'sale_price' => 1350,
-  'copies_in_stock' => 0
+  'copies_in_stock' => 0,
+  'image_ref' => 'tummelbridge.jpg'
 })
 
 product1.save()

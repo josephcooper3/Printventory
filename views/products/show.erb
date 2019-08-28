@@ -27,7 +27,8 @@
   </tr>
   <tr>
     <th>Image</th>
-    <td><%= @product.image_ref() %></td>
+    <td><img src="/images/<%= @product.image_ref() %>"
+      alt="Image of the artwork <%= @product.title() %> by <%= Artist.find_by_id(@product.artist_id()).full_name() %>"></td>
   </tr>
 </table>
 
