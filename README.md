@@ -25,7 +25,7 @@ ruby app.rb
 ```
 Then navigate to localhost/4567 in your browser (Chrome is recommended).
 
-To load a selection of sample data, run the fseeds script:
+To load a selection of sample data, run the seeds script:
 ```
 ruby db/seeds.rb
 ```
