@@ -19,6 +19,11 @@ h1 {
   font-family: 'Comfortaa', cursive;
 }
 
+h1 a {
+  color: #202C39;
+  text-decoration: none;
+}
+
 .pill-nav a {
   display: inline-flex;
   color: #202C39;;
