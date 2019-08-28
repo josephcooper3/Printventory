@@ -28,7 +28,8 @@ class Artist
   end
 
   def self.all()
-    sql = "SELECT * FROM artists"
+    sql = "SELECT * FROM artists
+    ORDER BY last_name"
     result = SqlRunner.run(sql)
     map_results(result)
   end
