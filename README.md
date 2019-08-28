@@ -24,3 +24,10 @@ To start the app, run the following command:
 ruby app.rb
 ```
 Then navigate to localhost/4567 in your browser (Chrome is recommended).
+
+To load a selection of sample data, run the fseeds script:
+```
+ruby db/seeds.rb
+```
+
+All included images for samples are Public Domain from the Yale Centre for British Art: https://britishart.yale.edu/collections/search
