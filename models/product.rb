@@ -4,7 +4,7 @@ require('pry')
 class Product
 
   attr_reader :id
-  attr_accessor :title, :description, :artist_id, :buying_cost, :sale_price, :copies_in_stock
+  attr_accessor :title, :description, :artist_id, :buying_cost, :sale_price, :copies_in_stock, :image_ref
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -14,6 +14,7 @@ class Product
     @buying_cost = options['buying_cost'].to_i
     @sale_price = options['sale_price'].to_i
     @copies_in_stock = options['copies_in_stock'].to_i
+    @image_ref = options['image_ref']
   end
 
   def save()
@@ -23,12 +24,13 @@ class Product
     artist_id,
     buying_cost,
     sale_price,
-    copies_in_stock
+    copies_in_stock,
+    image_ref
     )
     VALUES
-    ($1, $2, $3, $4, $5, $6)
+    ($1, $2, $3, $4, $5, $6, $7)
     RETURNING id"
-    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock]
+    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock, @image_ref]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
   end
@@ -51,12 +53,13 @@ class Product
     artist_id,
     buying_cost,
     sale_price,
-    copies_in_stock
+    copies_in_stock,
+    image_ref
     )
-    = ($1, $2, $3, $4, $5, $6)
-    WHERE id = $7
+    = ($1, $2, $3, $4, $5, $6, $7)
+    WHERE id = $8
     "
-    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock, @id]
+    values = [@title, @description, @artist_id, @buying_cost, @sale_price, @copies_in_stock, @image_ref, @id]
     SqlRunner.run(sql, values)
   end
 

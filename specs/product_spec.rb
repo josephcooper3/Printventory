@@ -12,7 +12,8 @@ class ProductTest < MiniTest::Test
       'artist_id' => 2,
       'buying_cost' => 559,
       'sale_price' => 1299,
-      'copies_in_stock' => 5
+      'copies_in_stock' => 5,
+      'image_ref' => 'waterlilies.jpg'
       })
   end
 
@@ -78,6 +79,15 @@ class ProductTest < MiniTest::Test
   def test_can_decrease_copies_in_stock
     @product1.copies_in_stock -= 1
     assert_equal(4, @product1.copies_in_stock())
+  end
+
+  def test_product_has_image_ref
+    assert_equal('waterlilies.jpg', @product1.image_ref())
+  end
+
+  def test_can_change_image_ref
+    @product1.image_ref = 'lilies.png'
+    assert_equal('lilies.png', @product1.image_ref())
   end
 
   def test_stock_status_low_stock

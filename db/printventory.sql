@@ -14,5 +14,6 @@ CREATE TABLE products (
   artist_id INT8 REFERENCES artists(id) ON DELETE CASCADE,
   buying_cost INT,
   sale_price INT,
-  copies_in_stock INT4
+  copies_in_stock INT4,
+  image_ref VARCHAR(255)
 )
