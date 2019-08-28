@@ -1,3 +1,30 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+th {
+  background-color: #202C39;
+  color: #E0F2E9;
+}
+
+th a {
+    color: #E0F2E9;
+}
+
+th.wide {
+  text-align: center;
+}
+
 td.low-stock {
   background-color: orange;
 }

@@ -1,6 +1,6 @@
 <h3>Artist Details View</h3>
 
-<table style="width:100%">
+<table>
   <tr>
     <th>First Name</th>
     <td><%= @artist.first_name() %></td>
@@ -14,7 +14,7 @@
     <td><%= @artist.id() %></td>
   </tr>
   <tr>
-    <th colspan="2"><a href="/products/filter/<%= @artist.id() %>">See All Products by <%= @artist.full_name() %></a></th>
+    <th class="wide" colspan="2"><a href="/products/filter/<%= @artist.id() %>">See All Products by <%= @artist.full_name() %></a></th>
   </tr>
 </table>
 
