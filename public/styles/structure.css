@@ -26,7 +26,7 @@ h1 a {
 
 .pill-nav a {
   display: inline-flex;
-  color: #202C39;;
+  color: #202C39;
   text-align: center;
   padding: 14px;
   text-decoration: none;
@@ -49,4 +49,14 @@ h1 a {
 
 .button-array {
   display: inline-flex;
+}
+
+.index-buttons {
+  display: inline-flex;
+}
+
+.index-buttons a {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }
