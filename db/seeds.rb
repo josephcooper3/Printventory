@@ -35,8 +35,18 @@ product2 = Product.new({
   'copies_in_stock' => 2
 })
 
+product3 = Product.new({
+  'title' => 'The Blue Room',
+  'description' => 'Print on matte paper with card mount, 20cm x 35cm',
+  'artist_id' => artist2.id(),
+  'buying_cost' => 615,
+  'sale_price' => 1350,
+  'copies_in_stock' => 0
+})
+
 product1.save()
 product2.save()
+product3.save()
 
 binding.pry
 nil

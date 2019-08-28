@@ -1,4 +1,6 @@
 require_relative('../db/sqlrunner')
+require_relative('../models/product')
+
 
 class Artist
 
@@ -66,6 +68,14 @@ class Artist
     return @first_name if @last_name == nil
     return @last_name if @first_name == nil
     return "#{@first_name} #{@last_name}"
+  end
+
+  def all_products()
+    sql = "SELECT * FROM products
+    WHERE products.artist_id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    Product.map_results(result)
   end
 
 end
