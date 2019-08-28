@@ -100,7 +100,7 @@ class Product
   def self.convert_to_pence(amount)
     amount = amount.to_s
     amount = amount.split('.')
-    pounds =  amount[0].to_i * 100
+    pounds = amount[0].to_i * 100
     pence = amount[1].to_i
     return pounds + pence
   end

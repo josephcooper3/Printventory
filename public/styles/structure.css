@@ -1,3 +1,7 @@
+body {
+  background-color: #E0F2E9;
+  margin: 0;
+}
 
 .title-bar {
   display: flex;
@@ -7,23 +11,33 @@
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: #92B9BD;
+}
+
+h1 {
+  color: #202C39;
+  font-family: 'Comfortaa', cursive;
 }
 
 .pill-nav a {
   display: inline-flex;
-  color: black;
+  color: #202C39;;
   text-align: center;
   padding: 14px;
   text-decoration: none;
   border-radius: 20px;
-  border: 1px solid;
+  border: 1px solid #202C39;
+  font-family: 'Comfortaa', cursive;
 }
 
 .pill-nav a:hover {
-  background-color: black;
-  color: white;
+  background-color: #202C39;
+  color: #E0F2E9;
 }
 
 .content {
   margin-top: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
 }
