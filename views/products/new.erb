@@ -1,34 +1,54 @@
 <h3>Enter New Product</h3>
 
-<form action="/products" method="post">
+<div class="form-wrapper">
 
-  <label for="title-field">Title:</label>
-  <input type="text" name="title" id="title-field">
+  <form action="/products" method="post">
 
-  <label for="description-field">Description:</label>
-  <input type="text" name="description" id="description-field">
+    <div class="form-item">
+      <label for="title-field">Title:</label>
+      <input type="text" name="title" id="title-field">
+    </div>
 
-  <label for="artist_id-select">Artist:</label>
-  <select name="artist_id" id="artist_id-select">
-    <% @artists.each do |artist| %>
-      <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
-    <% end %>
-  </select>
+    <div class="form-item">
+      <label for="description-field">Description:</label>
+      <input type="text" name="description" id="description-field">
+    </div>
 
-  <label for="buying_cost-field">Buying Cost:</label>
-  <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field">
+    <div class="form-item">
+      <label for="artist_id-select">Artist:</label>
+      <select name="artist_id" id="artist_id-select">
+        <% @artists.each do |artist| %>
+        <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
+        <% end %>
+      </select>
+    </div>
 
-  <label for="sale_price-field">Sale Price:</label>
-  <input type="number" min="0.01" step="0.01" name="sale_price" id="sale_price-field">
+    <div class="form-item">
+      <label for="buying_cost-field">Buying Cost:</label>
+      <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field">
+    </div>
 
-  <label for="copies_in_stock-field">Copies in Stock:</label>
-  <input type="number" name="copies_in_stock" id="copies_in_stock-field">
+    <div class="form-item">
+      <label for="sale_price-field">Sale Price:</label>
+      <input type="number" min="0.01" step="0.01" name="sale_price" id="sale_price-field">
+    </div>
 
-  <label for="image_ref-field">Image Reference:</label>
-  <input type="text" name="image_ref" id="image_ref-field">
+    <div class="form-item">
+      <label for="copies_in_stock-field">Copies in Stock:</label>
+      <input type="number" name="copies_in_stock" id="copies_in_stock-field">
+    </div>
 
-  <br>
+    <div class="form-item">
+      <label for="image_ref-field">Image Reference:</label>
+      <input type="text" name="image_ref" id="image_ref-field">
+    </div>
 
-  <input type="submit" value="Submit">
+    <br>
 
-</form>
+    <div class="form-item">
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+
+</div>

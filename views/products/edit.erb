@@ -1,44 +1,64 @@
 <h3>Edit Product Details</h3>
 
-<form action="/products/<%= @product.id() %>" method="post">
+<div class="form-wrapper">
 
-  <label for="title-field">Title:</label>
-  <input type="text" name="title" id="title-field"
-  value="<%= @product.title() %>">
+  <form action="/products/<%= @product.id() %>" method="post">
 
-  <label for="image_ref-field">image_ref:</label>
-  <input type="text" name="image_ref" id="image_ref-field"
-  value="<%= @product.image_ref() %>">
+    <div class="form-item">
+      <label for="title-field">Title:</label>
+      <input type="text" name="title" id="title-field"
+      value="<%= @product.title() %>">
+    </div>
 
-  <label for="artist_id-select">Artist:</label>
-  <select name="artist_id" id="artist_id-select">
-    <% @artists.each do |artist| %>
-      <% if artist.id() == @product.artist_id() %>
+    <div class="form-item">
+      <label for="image_ref-field">image_ref:</label>
+      <input type="text" name="image_ref" id="image_ref-field"
+      value="<%= @product.image_ref() %>">
+    </div>
+
+    <div class="form-item">
+      <label for="artist_id-select">Artist:</label>
+      <select name="artist_id" id="artist_id-select">
+        <% @artists.each do |artist| %>
+        <% if artist.id() == @product.artist_id() %>
         <option value="<%= artist.id() %>" selected><%= artist.full_name() %></option>
-      <% else %>
+        <% else %>
         <option value="<%= artist.id() %>"><%= artist.full_name() %></option>
-      <% end %>
-    <% end %>
-  </select>
+        <% end %>
+        <% end %>
+      </select>
+    </div>
 
-  <label for="buying_cost-field">Buying Cost: £</label>
-  <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field"
-  value="<%= Product.convert_to_pounds(@product.buying_cost()) %>">
+    <div class="form-item">
+      <label for="buying_cost-field">Buying Cost: £</label>
+      <input type="number" min="0.01" step="0.01" name="buying_cost" id="buying_cost-field"
+      value="<%= Product.convert_to_pounds(@product.buying_cost()) %>">
+    </div>
 
-  <label for="sale_price-field">Sale Price: £</label>
-  <input type="number" min="0.01" step="0.01" name="sale_price" id="sale_price-field"
-  value="<%= Product.convert_to_pounds(@product.sale_price()) %>">
+    <div class="form-item">
+      <label for="sale_price-field">Sale Price: £</label>
+      <input type="number" min="0.01" step="0.01" name="sale_price" id="sale_price-field"
+      value="<%= Product.convert_to_pounds(@product.sale_price()) %>">
+    </div>
 
-  <label for="copies_in_stock-field">Copies in Stock:</label>
-  <input type="number" name="copies_in_stock" id="copies_in_stock-field"
-  value="<%= @product.copies_in_stock() %>">
+    <div class="form-item">
+      <label for="copies_in_stock-field">Copies in Stock:</label>
+      <input type="number" name="copies_in_stock" id="copies_in_stock-field"
+      value="<%= @product.copies_in_stock() %>">
+    </div>
 
-  <label for="image_ref-field">Image Reference:</label>
-  <input type="text" name="image_ref" id="image_ref-field"
-  value="<%= @product.image_ref() %>">
+    <div class="form-item">
+      <label for="image_ref-field">Image Reference:</label>
+      <input type="text" name="image_ref" id="image_ref-field"
+      value="<%= @product.image_ref() %>">
+    </div>
 
-  <br>
+    <br>
 
-  <input type="submit" value="Submit">
+    <div class="form-item">
+      <input type="submit" value="Submit">
+    </div>
 
-</form>
+  </form>
+
+</div>
