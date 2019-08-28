@@ -1,1 +1,21 @@
 
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pill-nav a {
+  display: inline-flex;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.pill-nav a:hover {
+  background-color: black;
+  color: white;
+}

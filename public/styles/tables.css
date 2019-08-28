@@ -1,7 +1,7 @@
-td.low-stock{
+td.low-stock {
   background-color: orange;
 }
 
-td.out-of-stock{
+td.out-of-stock {
   background-color: red;
 }
