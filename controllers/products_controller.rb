@@ -41,6 +41,7 @@ end
 
 get '/products/filter/:id' do
   @artist = Artist.find_by_id(params[:id])
+  @products = @artist.all_products()
   @artists = Artist.all()
   erb(:"products/filter")
 end
