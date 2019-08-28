@@ -6,9 +6,9 @@
   <input type="text" name="title" id="title-field"
   value="<%= @product.title() %>">
 
-  <label for="description-field">Description:</label>
-  <input type="text" name="description" id="description-field"
-  value="<%= @product.description() %>">
+  <label for="image_ref-field">image_ref:</label>
+  <input type="text" name="image_ref" id="image_ref-field"
+  value="<%= @product.image_ref() %>">
 
   <label for="artist_id-select">Artist:</label>
   <select name="artist_id" id="artist_id-select">
@@ -32,7 +32,13 @@
   <label for="copies_in_stock-field">Copies in Stock:</label>
   <input type="number" name="copies_in_stock" id="copies_in_stock-field"
   value="<%= @product.copies_in_stock() %>">
+
+  <label for="image_ref-field">Image Reference:</label>
+  <input type="text" name="image_ref" id="image_ref-field"
+  value="<%= @product.image_ref() %>">
+
   <br>
+
   <input type="submit" value="Submit">
 
 </form>
