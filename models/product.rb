@@ -38,7 +38,8 @@ class Product
   end
 
   def self.all()
-    sql = "SELECT * FROM products"
+    sql = "SELECT * FROM products
+    ORDER BY title"
     result = SqlRunner.run(sql)
     map_results(result)
   end
