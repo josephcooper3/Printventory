@@ -1,5 +1,4 @@
 require_relative('../db/sqlrunner')
-require('pry')
 
 class Product
 
